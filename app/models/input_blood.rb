@@ -1,0 +1,2 @@
+class InputBlood < ApplicationRecord
+end

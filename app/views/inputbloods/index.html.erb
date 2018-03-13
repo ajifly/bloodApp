@@ -1,0 +1,14 @@
+<div class="container">
+<h1>血液結果入力</h1>
+  <%= form_for :inputbloods, url: inputbloods_path do |f| %>
+    <p>
+      <%= f.label "白血球" %><br>
+      <%= f.text_field :leukocyte %>
+    </p>
+    <p>
+      <%= f.label "SEG" %><br>
+      <%= f.text_field :seg %>
+    </p>
+    <%= f.submit "送信" %>
+  <% end %>
+</div>

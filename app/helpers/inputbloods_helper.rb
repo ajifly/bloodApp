@@ -1,0 +1,2 @@
+module InputbloodsHelper
+end
