@@ -11,5 +11,6 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require Chart.min
 //= require turbolinks
 //= require_tree .
