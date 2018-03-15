@@ -1,14 +1,10 @@
 <div class="container">
-<h1>血液結果入力</h1>
-  <%= form_for :inputbloods, url: inputbloods_path do |f| %>
-    <p>
-      <%= f.label "白血球" %><br>
-      <%= f.text_field :leukocyte %>
-    </p>
-    <p>
-      <%= f.label "SEG" %><br>
-      <%= f.text_field :seg %>
-    </p>
-    <%= f.submit "送信" %>
-  <% end %>
+  <h1>採血結果</h1>
+  <div class="row">
+    <% @inputbloods.each do |inputblood| %>
+      <h2>日付：<b><%= inputblood.date %></b></h2>
+      <h2>白血球：<b><%= inputblood.leukocyte %></b></h2>
+      <h2>SEG：<b><%= inputblood.seg %></b></h2>
+    <% end %>
+  </div>
 </div>

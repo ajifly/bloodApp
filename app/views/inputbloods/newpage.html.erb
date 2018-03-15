@@ -2,13 +2,6 @@
 <h1>採血結果入力</h1>
   <%= form_for :inputbloods, url: inputbloods_path do |f| %>
 
-    <% if @inputblood.errors.any? %>
-      <%= @inputblood.errors.count %> 個のエラーあり
-      <% @inputblood.errors.full_messages.each do |meg| %>
-        <li><%= meg %></li>
-      <% end %>
-    <% end %>
-
     <p>
       <%= f.label "日付" %><br>
       <%= f.text_field :date %>
