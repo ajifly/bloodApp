@@ -1,15 +1,20 @@
 <div class="container">
   <h1>採血結果</h1>
   <div class="row">
-    <div class="col-md-2"
+    <div class="col-md-4">
     <% @inputbloods.each do |inputblood| %>
-      <h2>日付：<b><%= inputblood.date %></b></h2>
-      <h2>白血球：<b><%= inputblood.leukocyte %></b></h2>
-      <h2>SEG：<b><%= inputblood.seg %></b></h2>
+    <div class="mb-2">
+      <div class="card" style="width: 18rem;">
+        <h2>日付：<b><%= inputblood.date %></b></h2>
+        <h2>白血球：<b><%= inputblood.leukocyte %></b></h2>
+        <h2>SEG：<b><%= inputblood.seg %></b></h2>
+        <h2>好中球：<b><%= (inputblood.leukocyte).to_i * (inputblood.seg).to_i %></b></h2>
+      </div>
+    </div>
     <% end %>
   </div>
 
-    <div class="col-md-25">
+    <div class="col-md-8">
       <aside><section>
         <canvas id="myChart" width="900" height="400"></canvas>
       </section></aside>
