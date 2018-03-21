@@ -16,7 +16,7 @@
 
     <div class="col-md-8">
       <aside><section>
-        <canvas id="myChart" width="900" height="400"></canvas>
+        <canvas id="myChart" width="1000" height="700"></canvas>
       </section></aside>
       </div>
     <script>
@@ -24,10 +24,10 @@
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: [1,2,3,4,5,6,7,8],
+            labels: gon.labels,
             datasets: [{
                 label: "好中球数",
-                data: [152,332,456,76,54,32,56,83],
+                data: gon.koutyuukyuu,
                 backgroundColor: 'rgba(255, 99, 132, 1.0)',
                 borderColor: 'rgba(255, 50, 132, 1.0)',
                 fill: false

@@ -7,6 +7,15 @@ class InputbloodsController < ApplicationController
 
   def index
     @inputbloods = InputBlood.all
+    gon.koutyuukyuu = Array.new
+    gon.date = Array.new
+    gon.labels = Array.new
+    @inputbloods.each_with_index do |blood, i|
+      leg = blood.leukocyte
+      seg = blood.seg
+      gon.koutyuukyuu.push(leg.to_i * seg.to_i)
+      gon.labels.push(i + 1)
+    end
   end
 
   def create
